@@ -1,0 +1,12 @@
+--- a/curs_main.c	original version
++++ b/curs_main.c	2016-04-13 23:02:10.405758964 +0200
+@@ -1500,8 +1500,7 @@
+ #endif
+ 	mutt_expand_path (buf, sizeof (buf));
+ #ifdef USE_SIDEBAR
+-	if (sb_set_open_buffy (buf) == NULL)
+-		break;
++	sb_set_open_buffy (buf);
+ #endif
+ 	if (mx_get_magic (buf) <= 0)
+ 	{
